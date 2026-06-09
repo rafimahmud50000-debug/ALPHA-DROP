@@ -40,7 +40,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         {/* Col 2: Brand/AlphaDrop Links */}
         <div className="space-y-3">
-          <h4 className="text-[11.5px] font-black text-gray-900 uppercase tracking-widest border-b border-gray-55 pb-1">
+          <h4 className="text-xs font-bold text-gray-900 tracking-tight border-b border-gray-100 pb-1.5">
             AlphaDrop
           </h4>
           <div className="flex flex-col gap-2 text-[11px] text-gray-500 font-semibold font-sans">
@@ -52,7 +52,7 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         {/* Col 3: Customer Care links */}
         <div className="space-y-3">
-          <h4 className="text-[11.5px] font-black text-gray-900 uppercase tracking-widest border-b border-gray-55 pb-1">
+          <h4 className="text-xs font-bold text-gray-900 tracking-tight border-b border-gray-100 pb-1.5">
             Customer Care
           </h4>
           <div className="flex flex-col gap-2 text-[11px] text-gray-500 font-semibold font-sans">
@@ -65,12 +65,12 @@ export default function Footer({ onNavigate }: FooterProps) {
 
         {/* Col 4: Payment Methods (Only bKash as requested) */}
         <div className="space-y-3">
-          <h4 className="text-[11.5px] font-black text-gray-900 uppercase tracking-widest border-b border-gray-55 pb-1">
+          <h4 className="text-xs font-bold text-gray-900 tracking-tight border-b border-gray-100 pb-1.5">
             Payment Methods
           </h4>
           
           <div className="flex justify-start">
-            <div className="bg-gray-50 border border-gray-150 px-4 py-2 rounded-lg text-center text-[10px] font-black uppercase text-pink-600 block shadow-3xs font-mono">
+            <div className="bg-gray-50 border border-gray-150 px-4 py-2 rounded-xl text-center text-xs font-semibold text-pink-600 block shadow-3xs font-sans">
               bKash
             </div>
           </div>

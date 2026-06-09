@@ -93,7 +93,7 @@ export default function DashboardView({ onNavigate, userEmail, currentUser, onLo
   ]);
 
   // Profile Form States
-  const [profileName, setProfileName] = useState(currentUser?.name || "Rafi Mahmud");
+  const [profileName, setProfileName] = useState(currentUser?.name || "Guest User");
   const [profilePhone, setProfilePhone] = useState(currentUser?.phone || "+880 1712-345678");
   const [profileGender, setProfileGender] = useState("Male");
   const [profileDob, setProfileDob] = useState("1996-06-07");
@@ -115,13 +115,13 @@ export default function DashboardView({ onNavigate, userEmail, currentUser, onLo
 
   // Addresses state
   const [addresses, setAddresses] = useState([
-    { id: "A-1", label: "Home Address (Default)", name: "Rafi Mahmud", phone: "+880 1712-345678", region: "Dhaka - South", addressDetail: "House 45, Road 11, Dhanmondi, Dhaka" },
-    { id: "A-2", label: "Office Address", name: "Rafi Mahmud", phone: "+880 1911-876543", region: "Dhaka - North", addressDetail: "Level 14, Tower B, Gulshan Circle 2, Dhaka" }
+    { id: "A-1", label: "Home Address (Default)", name: "Guest User", phone: "+880 1712-345678", region: "Dhaka - South", addressDetail: "House 45, Road 11, Dhanmondi, Dhaka" },
+    { id: "A-2", label: "Office Address", name: "Guest User", phone: "+880 1911-876543", region: "Dhaka - North", addressDetail: "Level 14, Tower B, Gulshan Circle 2, Dhaka" }
   ]);
 
   // Support Chat Message States
   const [chatMessages, setChatMessages] = useState([
-    { sender: "agent", text: "Hello Rafi Mahmud! I am AlphaDrop Support Assist, your virtual shopping helper. How can I assist you with your express order tracking, returns, or vouchers today?", time: "1:25 PM" }
+    { sender: "agent", text: "Hello! I am AlphaDrop Support Assist, your virtual shopping helper. How can I assist you with your express order tracking, returns, or vouchers today?", time: "1:25 PM" }
   ]);
   const [newChatText, setNewChatText] = useState("");
 
@@ -718,7 +718,7 @@ export default function DashboardView({ onNavigate, userEmail, currentUser, onLo
               <div className="space-y-5">
                 <div className="border-b border-gray-100 pb-3">
                   <h3 className="text-lg font-bold text-gray-900">Product Ratings & Reviews</h3>
-                  <p className="text-[11px] text-gray-400">Share your hardware satisfaction index with other Rafi Mahmud system modules.</p>
+                  <p className="text-[11px] text-gray-400">Share your hardware satisfaction index with other product community modules.</p>
                 </div>
 
                 <div className="space-y-4">

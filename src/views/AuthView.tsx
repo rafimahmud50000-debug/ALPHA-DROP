@@ -69,7 +69,7 @@ export default function AuthView({ onNavigate, onLoginSuccess }: AuthViewProps) 
     if (isLoginTab) {
       // Simulate Login
       const mockUser = {
-        name: name.trim() || "Rafi Mahmud",
+        name: name.trim() || "Guest User",
         email: email.trim().toLowerCase(),
         phone: phone.trim() || "+880 1712-345678",
       };
@@ -95,8 +95,8 @@ export default function AuthView({ onNavigate, onLoginSuccess }: AuthViewProps) 
 
   const handleGuestLogin = () => {
     const guestUser = {
-      name: "Rafi Mahmud",
-      email: "abdullahalrafimahmud650@gmail.com",
+      name: "Guest User",
+      email: "guest@example.com",
       phone: "+880 1712-345678"
     };
     setSuccessMsg("Continuing as verified guest...");
@@ -243,7 +243,7 @@ export default function AuthView({ onNavigate, onLoginSuccess }: AuthViewProps) 
                       required
                       value={name}
                       onChange={(e) => setName(e.target.value)}
-                      placeholder="e.g. Abdullah Al Rafi"
+                      placeholder="e.g. John Doe"
                       className="w-full bg-white border border-gray-250 focus:border-[#f27495]/60 pr-4 pl-10 py-2.5 rounded-xl text-xs font-sans tracking-tight focus:outline-none focus:ring-1 focus:ring-[#f27495]/20 shadow-xs"
                     />
                     <User size={14} className="absolute left-3.5 top-3.5 text-gray-400" />
@@ -292,7 +292,7 @@ export default function AuthView({ onNavigate, onLoginSuccess }: AuthViewProps) 
                   {isLoginTab && (
                     <span 
                       type="button" 
-                      onClick={() => setErrMessage("Please proceed as Rafi Mahmud via guest login or test another email configuration.")} 
+                      onClick={() => setErrMessage("Please proceed via guest login or test another email configuration.")} 
                       className="text-[10px] font-bold text-[#f27495] hover:underline cursor-pointer select-none"
                     >
                       Forgot?
@@ -359,7 +359,7 @@ export default function AuthView({ onNavigate, onLoginSuccess }: AuthViewProps) 
               id="btn-guest-bypass"
             >
               <Ticket size={13} className="text-[#f27495]" />
-              <span>Login as Rafi Mahmud (Default Tester)</span>
+              <span>Login as Guest Tester (Default)</span>
             </button>
           </div>
 

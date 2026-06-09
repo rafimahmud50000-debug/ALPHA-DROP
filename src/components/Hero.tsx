@@ -26,11 +26,11 @@ export default function Hero({ onExplore }: HeroProps) {
 
   const slides = [
     {
-      title: "THE ESSENTIALS",
-      tagline: "CURATED MODERN LIVING",
-      subtitle: "DISCOUNT RATIOS UP TO 56% OFF",
-      badge: "SEASON 2026 EDITION",
-      leadDesc: "A masterclass in daily utility. Handselected high-performance household solutions, rechargeable standing units, and premium backups customized for structural stability.",
+      title: "Modern Living Essentials",
+      tagline: "Curated quality products",
+      subtitle: "Up to 56% off today only",
+      badge: "2026 Collection",
+      leadDesc: "A masterclass in daily utility. Handselected high-performance household solutions, rechargeable standing units, and premium backups customized for active homes.",
       bgColor: "bg-[#111827]",
       textColor: "text-white",
       borderColor: "border-neutral-800",
@@ -51,15 +51,15 @@ export default function Hero({ onExplore }: HeroProps) {
       ]
     },
     {
-      title: "MONSOON SPECIALS",
-      tagline: "SOPHISTICATED OUTDOORS",
-      subtitle: "FLAT 40% OFF THE WEAVE COLLECTION",
-      badge: "TRADITIONAL MEETS MODERN",
+      title: "Monsoon Special Drops",
+      tagline: "Sophisticated outdoor gear",
+      subtitle: "Flat 40% off traditional weave",
+      badge: "Traditional Heritage Weave",
       leadDesc: "Embrace the beauty of handloom threads and high-density performance weaves. Water-resistant protective luxury sleeves and handcrafted Monipuri slingbags.",
       bgColor: "bg-[#fafcfb]",
       textColor: "text-neutral-900",
       borderColor: "border-neutral-200/80",
-      accentColor: "#48c9a6",
+      accentColor: "#f27495",
       products: [
         {
           name: "Handwoven Jute Laptop Sleeve",
@@ -76,10 +76,10 @@ export default function Hero({ onExplore }: HeroProps) {
       ]
     },
     {
-      title: "SMART LIVING",
-      tagline: "PRECISE DOMESTICITY",
-      subtitle: "100% BRAND AUTHENTICITY ASSURANCE",
-      badge: "WALTON & SINGER HIGHLIGHTS",
+      title: "Smart Home Appliances",
+      tagline: "Precise kitchen & electronic units",
+      subtitle: "100% Sourced authentication",
+      badge: "Walton & Singer Highlights",
       leadDesc: "Upgrade home micro-climates and modern kitchens. High-efficiency brushless systems, rapid convection technology, and electronic cooking utilities with minimal layout footprints.",
       bgColor: "bg-[#090d16]",
       textColor: "text-white",
@@ -99,55 +99,54 @@ export default function Hero({ onExplore }: HeroProps) {
   const s = slides[activeSlide];
 
   return (
-    <div className="w-full relative overflow-hidden group select-none transition-colors duration-500" id="editorial-hero">
-      {/* Container with sharp custom border - no standard rounded-2xl */}
-      <div className={`w-full border-y md:border ${s.borderColor} ${s.bgColor} p-6 sm:p-10 md:p-14 flex flex-col md:grid md:grid-cols-12 gap-8 items-stretch min-h-[460px] relative transition-all duration-500`}>
+    <div className="w-full relative overflow-hidden group select-none transition-colors duration-500 rounded-3xl shadow-sm" id="editorial-hero">
+      <div className={`w-full border ${s.borderColor} ${s.bgColor} p-6 sm:p-10 md:p-14 flex flex-col md:grid md:grid-cols-12 gap-8 items-stretch min-h-[460px] relative transition-all duration-500`}>
         
         {/* Left Editorial Text Block */}
         <div className="md:col-span-7 flex flex-col justify-between space-y-8 relative z-20">
           <div className="space-y-4">
             {/* Minimal High-End Badge */}
             <div className="flex items-center gap-2">
-              <span className={`text-[9px] tracking-[0.25em] font-extrabold uppercase px-3 py-1 bg-neutral-900/10 dark:bg-white/10 ${s.textColor} border border-current/10 rounded-[3px]`}>
+              <span className={`text-[10px] tracking-wider font-semibold px-2.5 py-0.5 rounded-lg bg-white/10 ${s.textColor} border border-current/10`}>
                 {s.badge}
               </span>
-              <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: s.accentColor }} />
-              <span className="text-[9px] font-bold tracking-[0.15em] text-neutral-400 uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#f27495]" />
+              <span className="text-[10px] font-bold text-gray-400 capitalize">
                 {s.tagline}
               </span>
             </div>
 
             {/* Giant Editorial Headline */}
-            <h1 className={`font-sans font-black tracking-tight leading-[0.9] text-3xl sm:text-5xl md:text-6xl uppercase ${s.textColor}`}>
+            <h1 className={`font-sans font-bold tracking-tight leading-[1] text-3xl sm:text-4xl md:text-5xl ${s.textColor}`}>
               {s.title}
             </h1>
             
-            <p className={`text-xs sm:text-sm font-bold tracking-wide`} style={{ color: s.accentColor }}>
+            <p className="text-sm font-semibold tracking-wide" style={{ color: s.accentColor }}>
               {s.subtitle}
             </p>
 
-            <p className="text-[12px] sm:text-[13px] leading-relaxed text-neutral-400 font-medium max-w-md">
+            <p className="text-[12px] sm:text-[13px] leading-relaxed text-gray-400 font-medium max-w-md">
               {s.leadDesc}
             </p>
           </div>
 
-          {/* Hand-crafted custom Sharp CTA Button and Slider Controllers */}
+          {/* Slider actions */}
           <div className="flex flex-col sm:flex-row sm:items-center gap-6 pt-4">
             <button
               onClick={onExplore}
-              className="px-8 py-3.5 bg-neutral-950 dark:bg-white text-white dark:text-neutral-950 hover:bg-neutral-900 dark:hover:bg-neutral-100 font-sans text-xs font-black uppercase tracking-[0.2em] transition duration-200 flex items-center justify-between sm:justify-start gap-4 border border-white/10 group/cta cursor-pointer rounded-[3px]"
+              className="px-6 py-3 bg-[#f27495] hover:bg-[#eb5b80] text-white hover:shadow-md font-sans text-xs font-semibold tracking-wide transition duration-200 flex items-center justify-between sm:justify-start gap-4 cursor-pointer rounded-xl"
               id="hero-editorial-explore-btn"
             >
-              <span>DISCOVER NOW</span>
+              <span>Explore Collection</span>
               <ArrowRight size={14} className="group-hover/cta:translate-x-1.5 transition" />
             </button>
 
-            {/* Micro Slider Indicators */}
+            {/* Indicator dots navigation */}
             <div className="flex items-center gap-3">
               <button
                 onClick={handlePrev}
-                className="w-8 h-8 rounded-full border border-current/10 flex items-center justify-center text-neutral-400 hover:text-white transition duration-150 cursor-pointer"
-                title="Previous Selection"
+                className="w-8 h-8 rounded-full border border-current/10 flex items-center justify-center text-gray-400 hover:text-white transition duration-150 cursor-pointer"
+                title="Previous Slide"
               >
                 <ArrowLeft size={12} />
               </button>
@@ -157,10 +156,10 @@ export default function Hero({ onExplore }: HeroProps) {
                   <button
                     key={idx}
                     onClick={() => setActiveSlide(idx)}
-                    className="h-1 transition-all duration-350 cursor-pointer rounded-[1px]"
+                    className="h-1.5 transition-all duration-350 cursor-pointer rounded-full"
                     style={{
-                      width: activeSlide === idx ? "28px" : "6px",
-                      backgroundColor: activeSlide === idx ? s.accentColor : "rgb(156, 163, 175, 0.4)"
+                      width: activeSlide === idx ? "24px" : "6px",
+                      backgroundColor: activeSlide === idx ? "#f27495" : "rgba(156, 163, 175, 0.4)"
                     }}
                   />
                 ))}
@@ -168,8 +167,8 @@ export default function Hero({ onExplore }: HeroProps) {
 
               <button
                 onClick={handleNext}
-                className="w-8 h-8 rounded-full border border-current/10 flex items-center justify-center text-neutral-400 hover:text-white transition duration-150 cursor-pointer"
-                title="Next Selection"
+                className="w-8 h-8 rounded-full border border-current/10 flex items-center justify-center text-gray-400 hover:text-white transition duration-150 cursor-pointer"
+                title="Next Slide"
               >
                 <ArrowRight size={12} />
               </button>
@@ -180,10 +179,8 @@ export default function Hero({ onExplore }: HeroProps) {
         {/* Right Side: Asymmetric Overlapping Product Cards */}
         <div className="md:col-span-5 flex items-center justify-center md:justify-end relative pr-2 md:pr-4 mt-6 md:mt-0 z-10">
           
-          {/* Content Wrapper */}
           <div className="relative w-full max-w-[320px] h-[240px] sm:h-[280px]">
             {s.products.map((item, idx) => {
-              // Asymmetrical rotation & translation offsets to create a hand-crafted depth
               const isEven = idx % 2 === 0;
               const rotation = isEven ? "-rotate-6 translate-x-[-15%] sm:translate-x-[-25%] translate-y-[5%]" : "rotate-3 translate-x-[15%] sm:translate-x-[10%] translate-y-[-10%]";
               const zIndex = isEven ? "z-10" : "z-20";
@@ -192,32 +189,30 @@ export default function Hero({ onExplore }: HeroProps) {
                 <div 
                   key={idx} 
                   onClick={onExplore}
-                  className={`absolute inset-0 bg-white border border-neutral-200/50 p-4 rounded-[4px] flex flex-col justify-between shadow-lg select-all group/item cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:z-30 ${rotation} ${zIndex}`}
+                  className={`absolute inset-0 bg-white border border-neutral-100 p-4 rounded-2xl flex flex-col justify-between shadow-lg group/item cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:z-30 ${rotation} ${zIndex}`}
                 >
-                  {/* Aspect image frame */}
-                  <div className="w-full h-[60%] overflow-hidden bg-neutral-100 rounded-[2px] relative border border-neutral-150">
+                  <div className="w-full h-[60%] overflow-hidden bg-neutral-50 rounded-xl relative border border-neutral-100">
                     <img 
                       src={item.img} 
                       alt={item.name} 
                       className="w-full h-full object-cover group-hover/item:scale-105 transition duration-500"
                       referrerPolicy="no-referrer"
                     />
-                    <div className="absolute top-1.5 left-1.5 text-[7px] tracking-widest font-black uppercase bg-neutral-900 text-white px-2 py-0.5 rounded-[1px]">
+                    <div className="absolute top-1.5 left-1.5 text-[8px] tracking-wide font-semibold bg-neutral-900 text-white px-2 py-0.5 rounded-md">
                       {item.type}
                     </div>
                   </div>
 
-                  {/* Title metadata with strong typographic contrast */}
                   <div className="pt-2 text-left">
-                    <h4 className="text-[10px] tracking-wide font-black uppercase text-neutral-900 leading-tight block truncate">
+                    <h4 className="text-[12px] font-bold text-neutral-800 leading-tight block truncate">
                       {item.name}
                     </h4>
                     <div className="flex items-center justify-between mt-1.5">
-                      <span className="text-[9px] tracking-normal font-extrabold text-[#f27495]">
+                      <span className="text-[11px] font-bold text-[#f27495]">
                         {item.price}
                       </span>
-                      <span className="text-[8px] tracking-widest text-neutral-400 font-extrabold uppercase">
-                        ACQUIRE →
+                      <span className="text-[10px] font-semibold text-gray-400">
+                        View Product
                       </span>
                     </div>
                   </div>
@@ -232,4 +227,3 @@ export default function Hero({ onExplore }: HeroProps) {
     </div>
   );
 }
-

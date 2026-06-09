@@ -196,11 +196,11 @@ export default function HomeView({ onNavigate, onViewProduct }: HomeViewProps) {
       }} />
 
       {/* 2.5: Highlight Banner */}
-      <div className="bg-white text-slate-900 p-6 sm:p-8 flex flex-col justify-between border border-neutral-200 rounded-[2px] relative overflow-hidden shadow-sm" id="home-bento-highlights">
+      <div className="bg-white text-slate-900 p-6 sm:p-8 flex flex-col justify-between border border-neutral-200 rounded-2xl relative overflow-hidden shadow-sm" id="home-bento-highlights">
         <div className="space-y-2">
-          <span className="text-[10px] font-black tracking-[0.25em] text-emerald-800 uppercase">THE ALPHADROP COLLECTIVE</span>
-          <h3 className="font-sans font-black text-lg sm:text-xl md:text-2xl tracking-tight leading-tight uppercase">
-            INTEGRATING SMART MANUFACTURING & AUTOMATED DRONE SHIPPING PORTS.
+          <span className="text-xs font-semibold tracking-wider text-pink-600 uppercase">AlphaDrop Premium Catalog</span>
+          <h3 className="font-sans font-bold text-lg sm:text-xl md:text-2xl tracking-tight leading-tight text-neutral-850">
+            Connecting premium smart manufacturing directly with express home delivery.
           </h3>
         </div>
       </div>
@@ -211,12 +211,12 @@ export default function HomeView({ onNavigate, onViewProduct }: HomeViewProps) {
         {/* Categories Section Heading */}
         <div className="flex items-center justify-between border-b border-gray-100 pb-3.5 mb-6">
           <div>
-            <h2 className="text-xs font-black text-neutral-900 tracking-wider uppercase flex items-center gap-2">
+            <h2 className="text-sm font-bold text-gray-900 tracking-tight flex items-center gap-2">
               <span className="w-1.5 h-3.5 bg-[#f27495] rounded-full inline-block"></span>
-              Categories
+              Trending Categories
             </h2>
-            <p className="text-[9px] text-gray-400 font-extrabold uppercase tracking-widest mt-0.5">
-              Active: <span className="text-[#f27495] font-black">{activeCategory}</span>
+            <p className="text-xs text-gray-500 font-medium mt-0.5">
+              Active: <span className="text-[#f27495] font-bold">{activeCategory}</span>
             </p>
           </div>
           {activeCategory !== "All" && (
@@ -225,9 +225,9 @@ export default function HomeView({ onNavigate, onViewProduct }: HomeViewProps) {
                 setActiveCategory("All");
                 setSelectedCategoryKey("all_collections");
               }}
-              className="text-[8.5px] font-black text-[#f27495] hover:text-white bg-[#fff0f4] hover:bg-[#f27495] border border-[#f27495]/20 px-3 py-1.5 rounded-full transition duration-155 tracking-wider uppercase cursor-pointer shadow-3xs"
+              className="text-xs font-semibold text-[#f27495] bg-pink-50 hover:bg-[#f27495] hover:text-white border border-pink-100 px-3.5 py-1.5 rounded-xl transition duration-155 cursor-pointer shadow-3xs"
             >
-              Show All Drops
+              Show All Products
             </button>
           )}
         </div>
@@ -246,7 +246,7 @@ export default function HomeView({ onNavigate, onViewProduct }: HomeViewProps) {
                 className="group flex flex-col items-center cursor-pointer select-none"
                 id={`category-node-${item.key}`}
               >
-                {/* Stunning circle wrapper */}
+                {/* circle wrapper */}
                 <div className={`w-20 h-20 sm:w-24 sm:h-24 rounded-full flex items-center justify-center relative transition-all duration-300 border-2 ${
                   isActive 
                     ? "border-[#f27495] bg-[#fff0f4] shadow-md ring-4 ring-[#f27495]/15 scale-[1.04]"
@@ -262,7 +262,7 @@ export default function HomeView({ onNavigate, onViewProduct }: HomeViewProps) {
 
                   {/* Curated floating badge */}
                   {item.badge && (
-                    <span className={`absolute -top-1 -right-1 text-[7px] font-black tracking-widest px-1.5 py-0.5 rounded-full shadow-3xs uppercase ${item.badgeBg}`}>
+                    <span className={`absolute -top-1 -right-1 text-[8px] font-bold tracking-wide px-2 py-0.5 rounded-md shadow-3xs uppercase ${item.badgeBg}`}>
                       {item.badge}
                     </span>
                   )}
@@ -270,10 +270,10 @@ export default function HomeView({ onNavigate, onViewProduct }: HomeViewProps) {
 
                 {/* Readable caption labels */}
                 <div className="text-center mt-3 max-w-[110px]">
-                  <span className={`text-[10.5px] font-extrabold tracking-tight block leading-tight ${isActive ? "text-[#f27495] font-black" : "text-neutral-800 group-hover:text-[#f27495]"}`}>
+                  <span className={`text-[12px] font-bold tracking-tight block leading-tight ${isActive ? "text-[#f27495]" : "text-neutral-800 group-hover:text-[#f27495]"}`}>
                     {item.label}
                   </span>
-                  <span className="text-[8px] font-semibold text-neutral-400 uppercase tracking-widest block mt-0.5 whitespace-nowrap overflow-hidden text-ellipsis">
+                  <span className="text-[10px] font-medium text-gray-400 block mt-0.5 whitespace-nowrap overflow-hidden text-ellipsis">
                     {item.subtext}
                   </span>
                 </div>
@@ -286,7 +286,7 @@ export default function HomeView({ onNavigate, onViewProduct }: HomeViewProps) {
 
       {/* 4. Flash Sale */}
       <div 
-        className="relative bg-white text-neutral-900 border border-pink-100 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden rounded-[2px] shadow-sm" 
+        className="relative bg-white text-neutral-900 border border-gray-150 p-6 sm:p-8 flex flex-col md:flex-row items-center justify-between gap-6 overflow-hidden rounded-2xl shadow-sm" 
         style={{
           backgroundImage: "radial-gradient(circle, #fff1f2 1.5px, transparent 1.5px)",
           backgroundSize: "16px 16px"
@@ -298,28 +298,28 @@ export default function HomeView({ onNavigate, onViewProduct }: HomeViewProps) {
         
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-6 z-10 w-full md:w-auto">
           {/* Logo icon frame */}
-          <div className="w-12 h-12 bg-pink-50 text-pink-500 border border-pink-100 flex items-center justify-center rounded-sm shrink-0">
+          <div className="w-12 h-12 bg-pink-50 text-pink-500 border border-pink-100 flex items-center justify-center rounded-xl shrink-0">
             <Clock size={18} className="stroke-[2]" />
           </div>
           
           <div className="space-y-1">
             <div className="flex items-center gap-2">
-              <span className="text-[8px] font-black tracking-[0.25em] text-pink-500 uppercase">FLASH PROMO ACTIVE</span>
+              <span className="text-xs font-bold text-pink-500">Flash Promotion Active</span>
               <span className="w-1.5 h-1.5 rounded-full bg-pink-500 animate-pulse" />
             </div>
-            <h3 className="font-sans font-black text-sm uppercase tracking-wider text-neutral-800">
-              ACQUIRE EXCLUSIVE BATCH OFFERS
+            <h3 className="font-sans font-bold text-sm tracking-tight text-neutral-800">
+              Exclusive Factory-Direct Deals
             </h3>
-            <p className="font-sans text-[10px] text-neutral-400 font-bold uppercase tracking-wide">
-              Direct factory line liquidations starting instantly.
+            <p className="font-sans text-xs text-neutral-400 font-medium">
+              High-quality items sourced directly from international manufacturers.
             </p>
           </div>
         </div>
 
         {/* Countdown + CTA */}
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full md:w-auto z-10 shrink-0">
-          <div className="bg-white/80 backdrop-blur-xs border border-pink-100/80 p-2.5 rounded-sm shadow-xs flex items-center justify-center sm:justify-start gap-3">
-            <span className="text-[8px] font-black tracking-widest text-neutral-400 uppercase">OFFER ENDS IN:</span>
+          <div className="bg-white/80 backdrop-blur-xs border border-gray-150 p-2.5 rounded-xl shadow-xs flex items-center justify-center sm:justify-start gap-3">
+            <span className="text-xs font-semibold text-gray-500">Ends in:</span>
             <CountdownTimer />
           </div>
 
@@ -328,11 +328,11 @@ export default function HomeView({ onNavigate, onViewProduct }: HomeViewProps) {
               setActiveCategory("All");
               onNavigate("/products");
             }}
-            className="bg-pink-50 hover:bg-pink-100 text-pink-700 border border-pink-200/85 font-sans text-[10px] font-black tracking-widest uppercase px-6 py-3.5 rounded-sm transition cursor-pointer flex items-center justify-center gap-1.5 shadow-xs whitespace-nowrap"
+            className="bg-[#f27495] hover:bg-[#eb5b80] text-white font-sans text-xs font-semibold px-5 py-3 rounded-xl transition cursor-pointer flex items-center justify-center gap-1.5 shadow-xs whitespace-nowrap"
             id="btn-flash-acquire-offers"
           >
-            ACQUIRE OFFERS
-            <ChevronRight size={12} className="stroke-[2.5]" />
+            Explore Offers
+            <ChevronRight size={12} className="stroke-[2]" />
           </button>
         </div>
       </div>

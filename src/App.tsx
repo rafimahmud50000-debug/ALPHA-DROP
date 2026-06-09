@@ -5,7 +5,6 @@
 
 import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
-import BrowserAddressBar from "./components/BrowserAddressBar";
 
 // Views
 import HomeView from "./views/HomeView";
@@ -60,12 +59,8 @@ export default function App() {
         console.error("Error loading user context:", e);
       }
     }
-    // Default logged in user requested by environment configuration
-    return {
-      name: "Rafi Mahmud",
-      email: "abdullahalrafimahmud650@gmail.com",
-      phone: "+880 1712-345678"
-    };
+    // No default logged in user
+    return null;
   });
 
   const handleLoginSuccess = (user: UserProfile) => {
@@ -162,6 +157,10 @@ export default function App() {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentPath]);
+
   const handleViewProduct = (id: string) => {
     navigate(`/products/${id}`, { id });
   };
@@ -172,13 +171,6 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900 flex flex-col justify-between font-sans">
       
-      {/* Dynamic Simulated Next.js App Router Web Header Context */}
-      <BrowserAddressBar
-        currentPath={currentPath}
-        onBack={handleBack}
-        canGoBack={pathHistory.length > 1}
-      />
-
       {/* Primary Navigation Header */}
       <Header
         onNavigate={(path) => navigate(path)}

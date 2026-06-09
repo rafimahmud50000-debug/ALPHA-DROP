@@ -112,32 +112,32 @@ export default function AlphaDropLogo({
 
   if (mode === "header") {
     return (
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-1.5">
         {/* Render Delivery Truck Icon */}
-        {renderDeliveryTruckIcon(40)}
+        {renderDeliveryTruckIcon(38)}
         <div className="flex flex-col select-none font-sans justify-center">
-          <span className="font-sans font-black text-[#f27495] text-2xl sm:text-2.5xl tracking-tight leading-none lowercase">
-            Alpha<span className="text-[#48c9a6]">Drop</span>
+          <span className="font-sans font-bold text-gray-900 text-xl sm:text-[22px] tracking-tight leading-none">
+            Alpha<span className="text-[#f27495]">Drop</span>
           </span>
         </div>
       </div>
     );
   }
 
-  // Default 'full' mode: Large display version (exactly like the uploaded logo with subtext!)
+  // Default 'full' mode: Large display version
   return (
     <div className="flex flex-col items-center justify-center text-center p-4 select-none font-sans">
       {/* Large visual logo */}
       {renderDeliveryTruckIcon(90)}
       
       {/* Brand Name Typography */}
-      <h2 className={`font-sans font-black tracking-tight select-none mt-2 text-[#f27495] ${textClass}`}>
-        AlphaDrop
+      <h2 className={`font-sans font-bold tracking-tight select-none mt-2 text-gray-900 ${textClass}`}>
+        Alpha<span className="text-[#f27495]">Drop</span>
       </h2>
 
       {/* Slogan Subtext */}
-      <p className="text-[#48c9a6] text-xs font-semibold tracking-wide mt-1.5 font-sans">
-        -- Where Demand Meets No Boundaries --
+      <p className="text-[#f27495] text-xs font-semibold tracking-wide mt-1.5 font-sans">
+        Where Demand Meets No Boundaries
       </p>
     </div>
   );
