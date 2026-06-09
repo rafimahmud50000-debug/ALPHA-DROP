@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+
+  --color-bg-cyber: #f3f6f5;
+  --color-surface-cyber: #ffffff;
+  --color-border-cyber: #e2e8f0;
+  --color-accent-cyber: #2bdf91;
+  --color-text-cyber: #111827;
+  --color-muted-cyber: #64748b;
+
+  --animate-scanline: scanline 4s linear infinite;
+  --animate-pulse-hud: pulseHud 2.5s ease-in-out infinite;
+
+  @keyframes scanline {
+    0% {
+      top: 0%;
+    }
+    50% {
+      top: 100%;
+    }
+    100% {
+      top: 0%;
+    }
+  }
+
+  @keyframes pulseHud {
+    0%, 100% {
+      opacity: 0.4;
+      transform: scale(0.97);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.03);
+    }
+  }
+}
+
+/* Set global base styles */
+html, body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+}
+
+/* Scrollbar customizations to fit cyberpunk theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0f0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #1a2520;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2bdf91;
+}
+

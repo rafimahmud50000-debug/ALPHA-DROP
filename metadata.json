@@ -1,0 +1,6 @@
+{
+  "name": "Alpha Drop",
+  "description": "Premium cyberpunk-minimalist tech & futuristic apparel dropshipping storefront.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
